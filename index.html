@@ -713,110 +713,106 @@ Minha colaboração estendeu-se à comunicação, onde atualizei informações e
         <!--=====================================================
 					Contact Section
 				=====================================================-->
-        <section id="contact" class="section contact-section border-d">
-          <div class="section-block contact-block">
-            <div class="container-fluid">
-              <div class="section-header">
-                <h2>Entre em <strong class="color">Contato</strong></h2>
-              </div>
+       <section id="contact" class="section contact-section border-d">
+  <div class="section-block contact-block">
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2>Entre em <strong class="color">Contato</strong></h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <div class="contact-form">
+            <form
+              id="contact-form"
+              data-toggle="validator"
+              method="POST"
+              action="https://formspree.io/f/xzbnqkkk"
+            >
+              <div id="contact-form-result"></div>
 
               <div class="row">
-                <div class="col-md-8">
-                  <div class="contact-form">
-                    <form
-                      id="contact-form"
-                      data-toggle="validator"
-                      method="post"
-                      action="mail.php"
-                    >
-                      <div id="contact-form-result"></div>
-
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input
-                              type="text"
-                              class="form-control"
-                              placeholder="Nome"
-                              name="name"
-                              required
-                            />
-                            <div class="help-block with-errors"></div>
-                          </div>
-                        </div>
-
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input
-                              type="email"
-                              class="form-control"
-                              placeholder="Email"
-                              name="email"
-                              required
-                            />
-                            <div class="help-block with-errors"></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Titulo"
-                          name="subject"
-                          required
-                        />
-                        <div class="help-block with-errors"></div>
-                      </div>
-
-                      <div class="form-group">
-                        <textarea
-                          class="form-control"
-                          placeholder="Mensagem"
-                          name="message"
-                          rows="5"
-                          required
-                        ></textarea>
-                        <div class="help-block with-errors"></div>
-                      </div>
-
-                      <div class="form-group text-center">
-                        <button type="submit" class="btn-custom btn-color">
-                          Enviar Mensagem
-                        </button>
-                      </div>
-                    </form>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nome"
+                      name="name"
+                      required
+                    />
+                    <div class="help-block with-errors"></div>
                   </div>
                 </div>
 
-                <div class="col-md-4">
-                  <div class="contact-info-icons">
-                    <div class="contact-info">
-                      <i class="ion-ios-location-outline"></i>
-
-                      <p>Goias/Brazil</p>
-                    </div>
-
-                    <div class="contact-info">
-                      <i class="ion-ios-telephone-outline"></i>
-
-                      <p>+55 64 996171886</p>
-                    </div>
-
-                    <div class="contact-info">
-                      <i class="ion-android-globe"></i>
-
-                      <p>walisson.souza@discente.ufj.edu.br</p>
-                    </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                      name="email"
+                      required
+                    />
+                    <div class="help-block with-errors"></div>
                   </div>
                 </div>
               </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Titulo"
+                  name="subject"
+                  required
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="Mensagem"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <div class="form-group text-center">
+                <button type="submit" class="btn-custom btn-color">
+                  Enviar Mensagem
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-info-icons">
+            <div class="contact-info">
+              <i class="ion-ios-location-outline"></i>
+              <p>Goias/Brazil</p>
+            </div>
+
+            <div class="contact-info">
+              <i class="ion-ios-telephone-outline"></i>
+              <p>+55 64 996171886</p>
+            </div>
+
+            <div class="contact-info">
+              <i class="ion-android-globe"></i>
+              <p>walisson.souza@discente.ufj.edu.br</p>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
 
     <!--=====================================================
 			JavaScript Files
