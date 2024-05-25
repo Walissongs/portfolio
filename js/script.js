@@ -82,11 +82,9 @@ $(function(){
 	=========================================================================*/
 	$(document).ready(function() {
     $('#contact-form').on('submit', function(e) {
-        // Não interrompe o envio do formulário, deixando o Formspree lidar com ele
-        // Apenas lida com a resposta visual para o usuário
         $('#contact-form').one('submit', function() {
             var form = $(this);
-            // Mostrar mensagem de sucesso ou erro
+           
             form.on('success', function() {
                 $('#contact-form-result').html(
                     "<div class='form-group' >\
@@ -95,7 +93,7 @@ $(function(){
                         </div>\
                     </div>"
                 );
-                form.trigger('reset'); // Resetar o formulário após o envio
+                form.trigger('reset'); 
             }).on('error', function() {
                 $('#contact-form-result').html(
                     "<div class='form-group' >\
