@@ -81,28 +81,45 @@ $(function(){
 		Contact Form
 	=========================================================================*/
 	$(document).ready(function() {
-    $('#contact-form').on('submit', function(e) {
-        $('#contact-form').one('submit', function() {
-            var form = $(this);
-           
-            form.on('success', function() {
-                $('#contact-form-result').html(
-                    "<div class='form-group' >\
-                        <div class='alert alert-success' role='alert'> \
-                            <strong>Message Sent!</strong> We'll be in touch as soon as possible\
-                        </div>\
-                    </div>"
-                );
-                form.trigger('reset'); 
-            }).on('error', function() {
+    	$('#contact-form').on('submit', function(e) {
+        e.preventDefault(); 
+
+        var formData = $(this).serialize(); 
+
+        $.ajax({
+            url: 'https://formspree.io/f/xzbnqkkk',
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function(data) {
+                if (data.ok) { 
+                    $('#contact-form-result').html(
+                        "<div class='form-group' >\
+                            <div class='alert alert-success' role='alert'> \
+                                <strong>Mensagem Enviada!</strong> Entraremos em contato o mais breve possível.\
+                            </div>\
+                        </div>"
+                    );
+                    $('#contact-form').trigger('reset'); // Reseta o formulário após o envio
+                } else {
+                    $('#contact-form-result').html(
+                        "<div class='form-group' >\
+                            <div class='alert alert-danger' role='alert'> \
+                                <strong>Oops!</strong> Desculpe, ocorreu um erro. Tente novamente.\
+                            </div>\
+                        </div>"
+                    );
+                }
+            },
+            error: function() {
                 $('#contact-form-result').html(
                     "<div class='form-group' >\
                         <div class='alert alert-danger' role='alert'> \
-                            <strong>Oops!</strong> Sorry, an error occurred. Try again.\
+                            <strong>Oops!</strong> Houve um problema com o serviço de envio. Tente novamente mais tarde.\
                         </div>\
                     </div>"
                 );
-            });
+            }
         });
     });
 });
