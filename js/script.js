@@ -96,7 +96,7 @@ $(function(){
                     $('#contact-form-result').html(
                         "<div class='form-group' >\
                             <div class='alert alert-success' role='alert'> \
-                                <strong>Mensagem Enviada!</strong> Entraremos em contato o mais breve possível.\
+                                <strong>Mensagem Enviada!</strong>\
                             </div>\
                         </div>"
                     );
